@@ -137,3 +137,87 @@
 09:39:04.953 INFO  - Refreshed build settings on project hello_world 
 10:33:44.745 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
 10:36:10.473 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+10:55:55.071 INFO  - Restoring local repository preferences: 
+		 D:\work\lprs2\2013_2014\Resene_vezbe\lab56\basic_system 
+10:55:55.118 ERROR - Unable to read in MSS file C:\Users\student\Desktop\Bokasina123\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+10:56:09.844 ERROR - Unable to read in MSS file C:\Users\student\Desktop\Bokasina123\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+10:56:09.859 ERROR - Unable to read in MSS file C:\Users\student\Desktop\Bokasina123\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+10:56:09.891 WARN  - Unable to determine location of documentation for OS . 
+10:56:09.891 ERROR - Unable to read in MSS file C:\Users\student\Desktop\Bokasina123\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+10:56:09.891 ERROR - Unable to read in MSS file C:\Users\student\Desktop\Bokasina123\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+11:07:07.502 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+11:07:30.886 ERROR - Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+11:08:21.056 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+11:10:14.981 ERROR - Unexpected error while launching program. com.xilinx.sdk.targetmanager.TMException: Could not detect MDM peripheral on hardware. Please check:
+    1. If FPGA is configured correctly
+    2. MDM Core is instantiated in the design
+    3. If the correct FPGA is referred, in case of multiple FPGAs
+    4. If the correct MDM is referred, in case of a multiple MDM system
+    
+
+	at com.xilinx.sdk.targetmanager.internal.TM.connectToProcessor(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+11:10:55.604 ERROR - Unexpected error while launching program. com.xilinx.sdk.targetmanager.TMException: Could not detect MDM peripheral on hardware. Please check:
+    1. If FPGA is configured correctly
+    2. MDM Core is instantiated in the design
+    3. If the correct FPGA is referred, in case of multiple FPGAs
+    4. If the correct MDM is referred, in case of a multiple MDM system
+    
+
+	at com.xilinx.sdk.targetmanager.internal.TM.connectToProcessor(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+11:14:19.011 INFO  - FPGA configured successfully with bitstream "C:/Users/student/Desktop/Bokasina123/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:16:43.300 INFO  - FPGA configured successfully with bitstream "C:/Users/student/Desktop/Bokasina123/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:17:38.759 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to lock the JTAG cable for exclusive access
+
+ 
+11:18:02.533 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to lock the JTAG cable for exclusive access
+
+ 
+11:34:36.459 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to lock the JTAG cable for exclusive access
+
+ 
+11:35:20.388 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to lock the JTAG cable for exclusive access
+
+ 
+11:35:40.621 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+11:44:33.513 INFO  - FPGA configured successfully with bitstream "C:/Users/student/Desktop/Bokasina123/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:52:09.617 INFO  - FPGA configured successfully with bitstream "C:/Users/student/Desktop/Bokasina123/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:59:24.553 INFO  - FPGA configured successfully with bitstream "C:/Users/student/Desktop/Bokasina123/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:59:36.254 INFO  - System reset is completed. 
+11:59:52.385 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Target selection failed.
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(Unknown Source)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(Unknown Source)
+
+12:00:32.838 INFO  - FPGA configured successfully with bitstream "C:/Users/student/Desktop/Bokasina123/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+12:15:59.447 INFO  - FPGA configured successfully with bitstream "C:/Users/student/Desktop/Bokasina123/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+12:16:40.753 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
