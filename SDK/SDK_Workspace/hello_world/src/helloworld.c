@@ -47,8 +47,8 @@ void print(char *str);
 int main()
 {
     init_platform();
-    //unsigned char string_s[] = "LPRS 2\n";
-    unsigned char char_s = 'S';
+    unsigned char string_s[] = "IVAN JE ISPAO KONJ";
+   // unsigned char char_s = 'S';
 
     VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x00, 0x0);// direct mode   0
     VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x04, 0x3);// display_mode  1
@@ -62,16 +62,48 @@ int main()
 
     clear_text_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
     clear_graphics_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
-    draw_rectangle(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
+  //  draw_rectangle(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
+   // draw_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
     set_cursor(350);
-    //print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, string_s, 6);
-    set_font_size(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, 0x2);
-    print_char(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, char_s);
+    print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, string_s, 18);
+    set_font_size(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, 0x1);
+//    print_char(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, char_s);
+
+
+
+    set_foreground_color(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR  , 0x58F442); //base i int color
+    set_background_color(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR  , 0xF44245);
+
+
+
+    int i = -35;
+    int j = 0;
+    int k = 0;
+    /*while(1) {
+
+    	if(k == 1) {
+    		i --;
+    		if(i == -35) k = 0;
+    	}
+
+
+    	if(k==0){
+    		i ++;
+    		if (i == 35) k = 1;
+    	}
+    		draw_rectangle(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + i);
+    	while(j < 100000)
+    	{
+    		j++;
+    	}
+    	j = 0;
+
+    }*/
+    draw_circle(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
+
 
     //clear_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
 
-    set_foreground_color(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR  , 0x48F442);
-    set_background_color(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR  , 0xF44242);
 
 
     return 0;

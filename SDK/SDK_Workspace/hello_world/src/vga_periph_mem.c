@@ -30,12 +30,36 @@ void print_string(Xuint32 BaseAddress, unsigned char string_s[], int lenght){
 	}
 }
 
+void print_char(Xuint32 BaseAddress, unsigned char char_s)
+{
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + cursor_position , (char_s - 0x40));
+}
+
+
+
+void clear_screen(Xuint32 BaseAddress)
+{
+	int i;
+	int j;
+	for (i = 0; i < 4800; i++)
+	{
+		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + i*4, 0x20);
+	}
+	for (j = 0; j < 9600; j++)
+	{
+		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + GRAPHICS_MEM_OFF + i*4, 0x0);
+	}
+}
+
+
+
 void clear_graphics_screen(Xuint32 BaseAddress){
 	int i;
 	for (i = 0; i < 9600; i++){
 	    VGA_PERIPH_MEM_mWriteMemory(BaseAddress + GRAPHICS_MEM_OFF + i*4, 0x0);
 	}
 }
+
 
 void draw_square(Xuint32 BaseAddress){
 	int i, j, k;
@@ -67,35 +91,61 @@ void draw_rectangle(Xuint32 BaseAddress){
 		}
 }
 
-void print_char(Xuint32 BaseAddress, unsigned char char_s)
-{
-	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + cursor_position , (char_s - 0x40));
-}
 
-void clear_screen(Xuint32 BaseAddress)
-{
-	int i;
-	for (i = 0; i < 4800; i++)
-	{
-		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + i*4, 0x20);
-	}
-	for (i = 0; i < 9600; i++)
-	{
-		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + GRAPHICS_MEM_OFF + i*4, 0x0);
-	}
-}
 
 void set_foreground_color(Xuint32 BaseAddress, int color)
 {
 	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + 0x10, color);
 }
 
+
+
+
+
 void set_background_color(Xuint32 BaseAddress, int color)
 {
 	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + 0x14, color);
 }
 
+
+
+
+
+
 void set_font_size(Xuint32 BaseAddress, int size)
 {
 	VGA_PERIPH_MEM_mWriteMemory(BaseAddress  + 0x0C, size);
 }
+
+
+
+void draw_circle(Xuint32 BaseAddress){
+	int i, j, k;
+	int p = 1;
+	int m = 1;
+		for (j = 0; j < 480; j++){
+
+			if(m == 1) {
+			    		p --;
+			    		if(p == 0) m = 0;
+			    	}
+
+
+			    	if(m==0){
+			    		p ++;
+			    		if (p == 12) m = 1;
+			   }
+
+			for (k = 0; k<(640/32); k++){
+				i = j*(640/32) + k;
+				if ((j > 220) && (j < 225) && (k > 9 - p) && (k < 9 + p)) {
+					VGA_PERIPH_MEM_mWriteMemory(BaseAddress + GRAPHICS_MEM_OFF + i*4, 0xFFFFFFFF);
+				}
+				else{
+					VGA_PERIPH_MEM_mWriteMemory(BaseAddress + GRAPHICS_MEM_OFF + i*4, 0x0);
+				}
+			}
+		}
+}
+
+
